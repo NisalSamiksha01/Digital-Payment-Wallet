@@ -1,0 +1,13 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+
+function App() {
+  const [username, setUsername] = useState('');
+  const [amount, setAmount] = useState(0);
+
+  const register = async () => {
+    await axios.post('http://localhost:5000/api/register', { username });
+    alert('User registered');
+  };
+
+  const deposit = async
